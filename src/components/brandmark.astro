@@ -1,0 +1,45 @@
+---
+interface Props {
+  class?: string;
+}
+const { class: className } = Astro.props;
+---
+
+<svg
+  viewBox="0 0 204 160"
+  class:list={[className]}
+  role="img"
+  aria-label="Maly Roofing">
+  <rect x="18" y="95" width="24" height="55" fill="#0f172a"></rect>
+  <rect x="50" y="70" width="24" height="80" fill="#0f172a"></rect>
+  <rect x="86" y="10" width="32" height="140" fill="#0f172a"></rect>
+  <rect x="130" y="65" width="26" height="85" fill="#0f172a"></rect>
+  <rect x="164" y="92" width="24" height="58" fill="#0f172a"></rect>
+  <polyline
+    points="10,150 102,4 194,150"
+    fill="none"
+    stroke="#0f172a"
+    stroke-width="10"
+    stroke-linecap="round"
+    stroke-linejoin="round"></polyline>
+  <polyline
+    points="10,150 56,77"
+    fill="none"
+    stroke="#1e88c9"
+    stroke-width="10"
+    stroke-linecap="round"></polyline>
+  <polyline
+    points="148,77 194,150"
+    fill="none"
+    stroke="#1e88c9"
+    stroke-width="10"
+    stroke-linecap="round"></polyline>
+  <line
+    x1="10"
+    y1="150"
+    x2="194"
+    y2="150"
+    stroke="#1e88c9"
+    stroke-width="8"
+    stroke-linecap="round"></line>
+</svg>

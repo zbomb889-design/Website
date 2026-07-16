@@ -20,8 +20,8 @@ const resolvedImageWithDomain = new URL(
 const { title } = Astro.props;
 
 const makeTitle = title
-  ? title + " | " + "Ironclad Roofing Co."
-  : "Ironclad Roofing Co. - Commercial Roofing Contractors";
+  ? title + " | " + "Maly Roofing"
+  : "Maly Roofing - Commercial Roofing Contractors in Madison, WI";
 ---
 
 <!doctype html>
@@ -35,7 +35,7 @@ const makeTitle = title
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
       title={makeTitle}
-      description="Ironclad Roofing Co. is a commercial roofing contractor specializing in roof repair, replacement, inspections, maintenance, and storm damage restoration."
+      description="Maly Roofing is a commercial roofing contractor serving the Greater Madison, WI area since 1988 with roof repair, replacement, inspections, maintenance, storm damage restoration, and green roof installation."
       canonical={canonicalURL}
       twitter={{
         card: "summary_large_image",
@@ -44,11 +44,11 @@ const makeTitle = title
         basic: {
           url: canonicalURL,
           type: "website",
-          title: `Ironclad Roofing Co. - Commercial Roofing Contractors`,
+          title: `Maly Roofing - Commercial Roofing Contractors in Madison, WI`,
           image: resolvedImageWithDomain,
         },
         image: {
-          alt: "Ironclad Roofing Co.",
+          alt: "Maly Roofing",
         },
       }}
     />

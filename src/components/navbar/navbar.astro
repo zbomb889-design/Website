@@ -1,6 +1,7 @@
 ---
 import Container from "@/components/container.astro";
 import Link from "@/components/ui/link.astro";
+import Brandmark from "@/components/brandmark.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 import { Icon } from "astro-icon/components";
 
@@ -19,13 +20,10 @@ const menuitems = [
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
         <a href="/" class="text-lg flex items-center gap-2">
+          <Brandmark class="w-9 h-9 shrink-0" />
           <span
-            class="flex items-center justify-center w-9 h-9 rounded-md bg-slate-900">
-            <Icon class="text-brand-400 w-5 h-5" name="bx:bxs-home" />
-          </span>
-          <span
-            ><span class="font-bold text-slate-900">Ironclad</span><span
-              class="text-slate-500"> Roofing Co.</span
+            ><span class="font-bold text-slate-900">Maly</span><span
+              class="text-brand-600"> Roofing</span
             ></span
           >
         </a>
@@ -48,8 +46,8 @@ const menuitems = [
           }
         </ul>
         <div class="lg:hidden flex items-center mt-3 gap-4">
-          <Link href="tel:+18885550123" style="muted" block size="md">
-            (888) 555-0123
+          <Link href="tel:+16082497663" style="muted" block size="md">
+            (608) 249-7663
           </Link>
           <Link href="/contact" block size="md">Get a Free Quote</Link>
         </div>
@@ -58,10 +56,10 @@ const menuitems = [
     <div>
       <div class="hidden lg:flex items-center gap-5">
         <a
-          href="tel:+18885550123"
+          href="tel:+16082497663"
           class="flex items-center gap-2 text-slate-700 hover:text-slate-900">
           <Icon class="w-4 h-4 text-brand-600" name="bx:bxs-phone" />
-          (888) 555-0123
+          (608) 249-7663
         </a>
         <Link href="/contact" size="md">Get a Free Quote</Link>
       </div>
