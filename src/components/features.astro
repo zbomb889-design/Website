@@ -1,66 +1,65 @@
 ---
-// @ts-ignore
 import { Icon } from "astro-icon/components";
 
-const features = [
+const services = [
   {
-    title: "Bring Your Own Framework",
+    title: "Roof Repair",
     description:
-      "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
-    icon: "bx:bxs-briefcase",
+      "Fast, reliable fixes for leaks, punctures, flashing failures and ponding water before they turn into bigger problems.",
+    icon: "bx:bxs-wrench",
   },
   {
-    title: "100% Static HTML, No JS",
+    title: "Roof Replacement",
     description:
-      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
-    icon: "bx:bxs-window-alt",
+      "Full tear-off and re-roof projects using TPO, EPDM, metal and modified bitumen systems built for commercial loads.",
+    icon: "bx:bxs-layer-plus",
   },
   {
-    title: "On-Demand Components",
+    title: "Roof Inspections",
     description:
-      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.  ",
-    icon: "bx:bxs-data",
+      "Detailed inspections with photo documentation and a clear report so you know exactly what your roof needs.",
+    icon: "bx:bxs-search-alt-2",
   },
   {
-    title: "Broad Integration",
+    title: "Preventive Maintenance",
     description:
-      "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any other npm packages.",
-    icon: "bx:bxs-bot",
+      "Scheduled maintenance programs that catch small issues early, extend roof life and protect your warranty.",
+    icon: "bx:bxs-calendar-check",
   },
   {
-    title: "SEO Enabled",
+    title: "Storm Damage Restoration",
     description:
-      "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication. It just works!",
-    icon: "bx:bxs-file-find",
+      "Rapid tarping and emergency response after hail, wind and heavy rain, plus full insurance claim support.",
+    icon: "bx:bxs-cloud-lightning",
   },
   {
-    title: "Community",
+    title: "New Construction & Coatings",
     description:
-      "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
-    icon: "bx:bxs-user",
+      "Roofing for new commercial builds and reflective coatings that extend the life of your existing roof system.",
+    icon: "bx:bxs-buildings",
   },
 ];
 ---
 
-<div class="mt-16 md:mt-0">
-  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    Everything you need to start a website
+<div id="services" class="mt-16 md:mt-0 scroll-mt-24">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight text-slate-900">
+    Commercial Roofing Services
   </h2>
-  <p class="text-lg mt-4 text-slate-600">
-    Astro comes batteries included. It takes the best parts of state-of-the-art
-    tools and adds its own innovations.
+  <p class="text-lg mt-4 text-slate-600 max-w-2xl">
+    From a single-line repair to a full re-roof, our certified crews handle
+    every stage of your building's roof life cycle.
   </p>
 </div>
 
-<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-x-10 gap-y-12">
   {
-    features.map((item) => (
+    services.map((item) => (
       <div class="flex gap-4 items-start">
-        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
-          <Icon class="text-white" name={item.icon} />
+        <div class="mt-1 bg-slate-900 rounded-md p-2 w-10 h-10 shrink-0 flex items-center justify-center">
+          <Icon class="text-brand-400 w-5 h-5" name={item.icon} />
         </div>
         <div>
-          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <h3 class="font-semibold text-lg text-slate-900">{item.title}</h3>
           <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
         </div>
       </div>

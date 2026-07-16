@@ -1,0 +1,59 @@
+---
+import { Icon } from "astro-icon/components";
+
+const testimonials = [
+  {
+    quote:
+      "Our warehouse roof was leaking during every storm. Ironclad diagnosed it in one visit and had it fully repaired within the week. No surprises on the invoice either.",
+    name: "Dana Whitfield",
+    role: "Facilities Manager, Whitfield Logistics",
+    initials: "DW",
+  },
+  {
+    quote:
+      "They re-roofed our retail plaza over two weekends so we never had to close a single store. Communication was constant and the crew was professional the whole time.",
+    name: "Marcus Ibe",
+    role: "Property Manager, Crossroads Plaza",
+    initials: "MI",
+  },
+  {
+    quote:
+      "After the hail storm we had three roofers walk our property. Ironclad was the only one who put everything in writing and helped us through the insurance claim.",
+    name: "Sarah Kowalski",
+    role: "Owner, Kowalski Manufacturing",
+    initials: "SK",
+  },
+];
+---
+
+<div id="testimonials" class="mt-20 scroll-mt-24">
+  <div class="max-w-2xl mx-auto text-center">
+    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight text-slate-900">
+      What Property Owners Say
+    </h2>
+    <p class="text-lg mt-4 text-slate-600">
+      We've kept commercial roofs watertight across Central Ohio for over
+      two decades.
+    </p>
+  </div>
+
+  <div class="grid md:grid-cols-3 gap-8 mt-12">
+    {
+      testimonials.map((t) => (
+        <div class="flex flex-col bg-slate-50 rounded-xl p-6 border border-slate-100">
+          <Icon class="w-7 h-7 text-brand-500" name="bx:bxs-quote-alt-left" />
+          <p class="text-slate-700 mt-4 leading-relaxed grow">{t.quote}</p>
+          <div class="flex items-center gap-3 mt-6">
+            <span class="flex items-center justify-center w-10 h-10 rounded-full bg-slate-900 text-brand-400 font-semibold text-sm shrink-0">
+              {t.initials}
+            </span>
+            <div>
+              <p class="font-semibold text-slate-900 text-sm">{t.name}</p>
+              <p class="text-slate-500 text-xs">{t.role}</p>
+            </div>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>
