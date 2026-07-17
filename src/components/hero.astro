@@ -1,53 +1,104 @@
 ---
-import { Picture } from "astro:assets";
-import heroImage from "@/assets/hero.png";
 import Link from "@/components/ui/link.astro";
 import { Icon } from "astro-icon/components";
 ---
 
 <main
-  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
-  <div class="py-6 md:order-1 hidden md:block">
-    <Picture
-      src={heroImage}
-      alt="Astronaut in the air"
-      widths={[200, 400, 600]}
-      sizes="(max-width: 800px) 100vw, 620px"
-      loading="eager"
-      format="avif"
-    />
-  </div>
+  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24 gap-8">
   <div>
+    <span
+      class="inline-flex items-center gap-2 text-sm font-semibold text-brand-700 bg-brand-50 px-3 py-1 rounded-full">
+      <Icon class="w-4 h-4" name="bx:bxs-shield-alt-2" />
+      Licensed, Bonded & Insured
+    </span>
     <h1
-      class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
-      Marketing website done with Astro
+      class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter mt-4 text-slate-900">
+      Commercial Roofing Built to Outlast the Storm
     </h1>
     <p class="text-lg mt-4 text-slate-600 max-w-xl">
-      Astroship is a starter template for startups, marketing websites & landing
-      pages.<wbr /> Built with Astro.build and TailwindCSS. You can quickly create
-      any website with this starter.
+      Maly Roofing installs, repairs and maintains roofs for warehouses,
+      retail centers, offices and industrial facilities across the Greater
+      Madison area.<wbr /> Straightforward estimates, certified crews, and roofs
+      that hold up.
     </p>
     <div class="mt-6 flex flex-col sm:flex-row gap-3">
       <Link
-        href="#"
-        href="https://web3templates.com/templates/astroship-starter-website-template-for-astro"
-        target="_blank"
-        class="flex gap-1 items-center justify-center"
-        rel="noopener">
-        <Icon class="text-white w-5 h-5" name="bx:bxs-cloud-download" />
-
-        Download for Free
+        href="/contact"
+        class="flex gap-1 items-center justify-center">
+        <Icon class="text-white w-5 h-5" name="bx:bxs-quote-alt-left" />
+        Get a Free Quote
       </Link>
       <Link
         size="lg"
         style="outline"
-        rel="noopener"
-        href="https://github.com/surjithctly/astroship"
-        class="flex gap-1 items-center justify-center"
-        target="_blank">
-        <Icon class="text-black w-4 h-4" name="bx:bxl-github" />
-        GitHub Repo
+        href="/#services"
+        class="flex gap-1 items-center justify-center">
+        <Icon class="text-black w-4 h-4" name="bx:bxs-wrench" />
+        Our Services
       </Link>
+    </div>
+    <div class="mt-8 flex flex-wrap gap-x-8 gap-y-3 text-sm text-slate-600">
+      <div class="flex items-center gap-2">
+        <Icon class="w-5 h-5 text-brand-600" name="bx:bxs-medal" />
+        Serving Madison Since 1988
+      </div>
+      <div class="flex items-center gap-2">
+        <Icon class="w-5 h-5 text-brand-600" name="bx:bxs-cloud-lightning" />
+        Storm Damage Specialists
+      </div>
+      <div class="flex items-center gap-2">
+        <Icon class="w-5 h-5 text-brand-600" name="bx:bxs-badge-check" />
+        Manufacturer-Certified Crews
+      </div>
+    </div>
+  </div>
+  <div class="relative w-full py-6 md:order-1">
+    <svg
+      viewBox="0 0 500 420"
+      class="w-full h-auto"
+      role="img"
+      aria-label="Illustration of a commercial building with a flat roof">
+      <rect width="500" height="420" rx="24" fill="#f1f5f9"></rect>
+      <rect x="70" y="330" width="360" height="14" rx="4" fill="#cbd5e1"
+      ></rect>
+      <rect x="110" y="160" width="280" height="170" fill="#0f172a"></rect>
+      <g fill="#f1f5f9" opacity="0.9">
+        <rect x="135" y="185" width="35" height="35"></rect>
+        <rect x="190" y="185" width="35" height="35"></rect>
+        <rect x="245" y="185" width="35" height="35"></rect>
+        <rect x="300" y="185" width="35" height="35"></rect>
+        <rect x="355" y="185" width="35" height="35"></rect>
+        <rect x="135" y="240" width="35" height="35"></rect>
+        <rect x="190" y="240" width="35" height="35"></rect>
+        <rect x="355" y="240" width="35" height="35"></rect>
+      </g>
+      <rect x="245" y="240" width="90" height="90" fill="#1e293b"></rect>
+      <rect x="270" y="255" width="40" height="75" fill="#4c8a96"></rect>
+      <rect x="90" y="140" width="320" height="26" rx="3" fill="#334155"
+      ></rect>
+      <rect x="90" y="118" width="320" height="26" rx="3" fill="#4c8a96"
+      ></rect>
+      <g stroke="#e2e8f0" stroke-width="2" opacity="0.6">
+        <line x1="110" y1="124" x2="390" y2="124"></line>
+        <line x1="110" y1="130" x2="390" y2="130"></line>
+        <line x1="110" y1="136" x2="390" y2="136"></line>
+      </g>
+      <circle cx="420" cy="70" r="34" fill="#f5b942"></circle>
+      <g stroke="#f5b942" stroke-width="4" stroke-linecap="round">
+        <line x1="420" y1="18" x2="420" y2="4"></line>
+        <line x1="462" y1="42" x2="474" y2="32"></line>
+        <line x1="462" y1="98" x2="474" y2="108"></line>
+      </g>
+    </svg>
+    <div
+      class="absolute -bottom-2 left-2 bg-white shadow-lg rounded-lg px-4 py-3 flex items-center gap-3 border border-slate-100">
+      <span class="flex items-center justify-center w-9 h-9 rounded-md bg-slate-900 shrink-0">
+        <Icon class="text-brand-400 w-5 h-5" name="bx:bxs-check-shield" />
+      </span>
+      <div class="leading-tight">
+        <p class="text-sm font-semibold text-slate-900">Est. 1988</p>
+        <p class="text-xs text-slate-500">Trusted Madison Roofer</p>
+      </div>
     </div>
   </div>
 </main>

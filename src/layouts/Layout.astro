@@ -20,8 +20,8 @@ const resolvedImageWithDomain = new URL(
 const { title } = Astro.props;
 
 const makeTitle = title
-  ? title + " | " + "Astroship"
-  : "Astroship - Starter Template for Astro with Tailwind CSS";
+  ? title + " | " + "Maly Roofing"
+  : "Maly Roofing - Commercial Roofing Contractors in Madison, WI";
 ---
 
 <!doctype html>
@@ -35,22 +35,20 @@ const makeTitle = title
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
       title={makeTitle}
-      description="Astroship is a starter website template for Astro built with TailwindCSS."
+      description="Maly Roofing is a commercial roofing contractor serving the Greater Madison, WI area since 1988 with roof repair, replacement, inspections, maintenance, storm damage restoration, and green roof installation."
       canonical={canonicalURL}
       twitter={{
-        creator: "@surjithctly",
-        site: "@web3templates",
         card: "summary_large_image",
       }}
       openGraph={{
         basic: {
           url: canonicalURL,
           type: "website",
-          title: `Astroship - Starter Template for Astro`,
+          title: `Maly Roofing - Commercial Roofing Contractors in Madison, WI`,
           image: resolvedImageWithDomain,
         },
         image: {
-          alt: "Astroship Homepage Screenshot",
+          alt: "Maly Roofing",
         },
       }}
     />

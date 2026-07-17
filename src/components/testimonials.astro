@@ -1,0 +1,54 @@
+---
+import { Icon } from "astro-icon/components";
+
+const ratings = [
+  {
+    platform: "HomeAdvisor",
+    score: "5.0",
+    detail: "out of 5 stars",
+  },
+  {
+    platform: "GAF Certified Reviews",
+    score: "4.4",
+    detail: "out of 5 · 14 reviews",
+  },
+  {
+    platform: "Yellow Pages",
+    score: "5.0",
+    detail: "out of 5 stars",
+  },
+];
+---
+
+<div id="testimonials" class="mt-20 scroll-mt-24">
+  <div class="max-w-2xl mx-auto text-center">
+    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight text-slate-900">
+      Rated by Madison Property Owners
+    </h2>
+    <p class="text-lg mt-4 text-slate-600">
+      Since 1988 we've built our reputation one roof at a time. Here's how
+      customers rate us across review platforms.
+    </p>
+  </div>
+
+  <div class="grid sm:grid-cols-3 gap-8 mt-12 max-w-3xl mx-auto">
+    {
+      ratings.map((r) => (
+        <div class="flex flex-col items-center text-center bg-slate-50 rounded-xl p-6 border border-slate-100">
+          <div class="flex gap-1 text-brand-500">
+            <Icon class="w-5 h-5" name="bx:bxs-star" />
+            <Icon class="w-5 h-5" name="bx:bxs-star" />
+            <Icon class="w-5 h-5" name="bx:bxs-star" />
+            <Icon class="w-5 h-5" name="bx:bxs-star" />
+            <Icon class="w-5 h-5" name="bx:bxs-star-half" />
+          </div>
+          <p class="text-3xl font-bold text-slate-900 mt-3">{r.score}</p>
+          <p class="text-sm text-slate-500">{r.detail}</p>
+          <p class="text-sm font-semibold text-slate-700 mt-2">
+            {r.platform}
+          </p>
+        </div>
+      ))
+    }
+  </div>
+</div>

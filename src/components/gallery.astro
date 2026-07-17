@@ -1,0 +1,65 @@
+---
+import { Icon } from "astro-icon/components";
+
+const projects = [
+  {
+    title: "Retail Plaza Re-Roof",
+    location: "Sun Prairie, WI",
+    system: "TPO Membrane Replacement",
+    icon: "bx:bxs-buildings",
+  },
+  {
+    title: "Downtown Office Green Roof",
+    location: "Madison, WI",
+    system: "Green Roof & Paver Installation",
+    icon: "bx:bxs-leaf",
+  },
+  {
+    title: "Distribution Warehouse",
+    location: "Middleton, WI",
+    system: "Standing Seam Metal Roof",
+    icon: "bx:bxs-building-house",
+  },
+];
+---
+
+<div id="gallery" class="mt-20 scroll-mt-24">
+  <div class="max-w-2xl">
+    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight text-slate-900">
+      Before &amp; After Projects
+    </h2>
+    <p class="text-lg mt-4 text-slate-600">
+      A look at recent commercial roofing projects completed by our crews.
+    </p>
+  </div>
+
+  <div class="grid md:grid-cols-3 gap-8 mt-12">
+    {
+      projects.map((project) => (
+        <div class="rounded-xl overflow-hidden border border-slate-200">
+          <div class="grid grid-cols-2">
+            <div class="relative aspect-4/3 bg-gradient-to-br from-slate-500 to-slate-700 flex items-center justify-center">
+              <Icon class={`text-white/25 w-14 h-14`} name={project.icon} />
+              <span class="absolute top-2 left-2 text-[11px] font-semibold uppercase tracking-wide bg-slate-900/80 text-white px-2 py-1 rounded">
+                Before
+              </span>
+            </div>
+            <div class="relative aspect-4/3 bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center">
+              <Icon class="text-white/30 w-14 h-14" name="bx:bxs-check-shield" />
+              <span class="absolute top-2 right-2 text-[11px] font-semibold uppercase tracking-wide bg-slate-900/80 text-white px-2 py-1 rounded">
+                After
+              </span>
+            </div>
+          </div>
+          <div class="p-5 bg-white">
+            <h3 class="font-semibold text-slate-900">{project.title}</h3>
+            <p class="text-sm text-slate-500 mt-1">{project.location}</p>
+            <p class="text-sm text-brand-700 mt-2 font-medium">
+              {project.system}
+            </p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>

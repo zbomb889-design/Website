@@ -1,0 +1,27 @@
+---
+import { Icon } from "astro-icon/components";
+
+const badges = [
+  { label: "Licensed & Insured", icon: "bx:bxs-shield-alt-2" },
+  { label: "GAF Certified", icon: "bx:bxs-badge-check" },
+  { label: "CertainTeed Certified", icon: "bx:bxs-award" },
+  { label: "NRCA Member", icon: "bx:bxs-check-shield" },
+  { label: "ABC Member", icon: "bx:bxs-buildings" },
+  { label: "Serving Madison Since 1988", icon: "bx:bxs-medal" },
+];
+---
+
+<div class="mt-24">
+  <h2 class="text-center text-slate-500">Trusted &amp; Certified</h2>
+  <div
+    class="flex gap-x-10 gap-y-6 items-center justify-center mt-10 flex-wrap">
+    {
+      badges.map((badge) => (
+        <div class="flex items-center gap-2 text-slate-600">
+          <Icon class="w-5 h-5 text-brand-600" name={badge.icon} />
+          <span class="text-sm font-medium">{badge.label}</span>
+        </div>
+      ))
+    }
+  </div>
+</div>

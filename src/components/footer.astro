@@ -1,19 +1,59 @@
-<footer class="my-20">
-  <p class="text-center text-sm text-slate-500">
-    Copyright © {new Date().getFullYear()} Astroship. All rights reserved.
-  </p>
-  <!--
-    Can we ask you a favor 🙏
-    Please keep this backlink on your website if possible.
-    or Purchase a commercial license from https://web3templates.com
-  -->
-  <p class="text-center text-xs text-slate-500 mt-1">
-    Made by <a
-      href="https://web3templates.com"
-      target="_blank"
-      rel="noopener"
-      class="hover:underline">
-      Web3Templates
-    </a>
-  </p>
+---
+import { Icon } from "astro-icon/components";
+import Brandmark from "@/components/brandmark.astro";
+---
+
+<footer class="mt-20 border-t border-slate-200 bg-slate-50">
+  <div class="max-w-(--breakpoint-xl) mx-auto px-5 py-12">
+    <div class="grid sm:grid-cols-3 gap-8">
+      <div>
+        <a href="/" class="flex items-center gap-2">
+          <Brandmark class="h-7 w-auto shrink-0" />
+          <span class="font-bold text-slate-900">Maly Roofing</span>
+        </a>
+        <p class="text-sm text-slate-500 mt-3 leading-relaxed">
+          Licensed & insured commercial roofing contractor serving the
+          Greater Madison area since 1988 with repair, replacement,
+          inspection, maintenance and storm damage services.
+        </p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-slate-900 text-sm">Contact</h3>
+        <ul class="mt-3 space-y-2 text-sm text-slate-500">
+          <li class="flex items-center gap-2">
+            <Icon class="w-4 h-4 text-brand-600 shrink-0" name="bx:bxs-phone" />
+            <a href="tel:+16082497663" class="hover:text-slate-900"
+              >(608) 249-7663</a
+            >
+          </li>
+          <li class="flex items-center gap-2">
+            <Icon
+              class="w-4 h-4 text-brand-600 shrink-0"
+              name="uil:envelope"
+            />
+            <a href="mailto:info@malyroofing.com" class="hover:text-slate-900"
+              >info@malyroofing.com</a
+            >
+          </li>
+          <li class="flex items-center gap-2">
+            <Icon class="w-4 h-4 text-brand-600 shrink-0" name="bx:bxs-map" />
+            <span>4202 Robertson Rd, Madison, WI 53714</span>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold text-slate-900 text-sm">Company</h3>
+        <ul class="mt-3 space-y-2 text-sm text-slate-500">
+          <li><a href="/#services" class="hover:text-slate-900">Services</a></li>
+          <li><a href="/#gallery" class="hover:text-slate-900">Project Gallery</a></li>
+          <li><a href="/about" class="hover:text-slate-900">About Us</a></li>
+          <li><a href="/contact" class="hover:text-slate-900">Request a Quote</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="text-center text-sm text-slate-500 mt-10">
+      Copyright © {new Date().getFullYear()} Maly Roofing Inc. All rights
+      reserved.
+    </p>
+  </div>
 </footer>
